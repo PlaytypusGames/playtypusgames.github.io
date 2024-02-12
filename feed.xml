@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.4">Jekyll</generator><link href="touhma.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="touhma.github.io/" rel="alternate" type="text/html" /><updated>2024-02-12T11:45:07-05:00</updated><id>touhma.github.io/feed.xml</id><title type="html">PlaytypusGames</title><subtitle>We are here to make good Games</subtitle><entry><title type="html">The Playtypus Experiment #0</title><link href="touhma.github.io/announcements/2024/02/12/The-Playtypus-Experiment-0.html" rel="alternate" type="text/html" title="The Playtypus Experiment #0" /><published>2024-02-12T00:00:00-05:00</published><updated>2024-02-12T00:00:00-05:00</updated><id>touhma.github.io/announcements/2024/02/12/The-Playtypus-Experiment-0</id><content type="html" xml:base="touhma.github.io/announcements/2024/02/12/The-Playtypus-Experiment-0.html"><![CDATA[<h1 id="so-it-begin-">So It Begin …</h1>
+
+<h2 id="what-is-this-game-about-">What is this game about ?</h2>
+
+<h3 id="short-version">Short Version</h3>
+
+<p>A factory game in space.</p>
+
+<h3 id="longer-version">Longer Version</h3>
+
+<p>Nothing being set in stone YET as we are still early in the project what I can share for now is that the game will take inspirations from a little bit of everywhere.</p>
+
+<h3 id="the-main-offender">The main Offender</h3>
+<p><a href="https://store.steampowered.com/app/1366540/Dyson_Sphere_Program/">Dyson Sphere Program</a></p>
+
+<p><img src="https://cdn.akamai.steamstatic.com/steam/apps/1366540/ss_1f699b2ba7ce5025064050cf5498f6a576b89d31.1920x1080.jpg?t=1702624498" alt="Dyson Sphere Program" /></p>
+
+<p>The idea of sprawling factories has always appealed to me, and it’s the first game that was doing it at a scale that gave us the impressions that the planets were ours
+First of all , this is the kind of scale we are aiming at…</p>
+
+<h3 id="the-contenders">The Contenders</h3>
+
+<p><a href="https://www.factorio.com/">Factorio</a>
+<img src="https://cdn.factorio.com/assets/img/artwork/rocket-man.png" alt="Factorio" /></p>
+
+<p>First game in the entry that gave me this Automation obsession and triggered so many bitter alerts in my bases</p>
+
+<p><a href="https://www.satisfactorygame.com/">Satisfactory</a>
+<img src="https://a.storyblok.com/f/110098/1920x1080/24abf6040e/u8_1920x1080_nologo.png" alt="Satisfactory" /></p>
+
+<p>Second game in the genre that gave me sleepless night but at the same time show a very impressive building system</p>
+
+<p><a href="https://store.steampowered.com/app/1113120/IXION/">IXION</a>
+<img src="https://cdn.akamai.steamstatic.com/steam/apps/1113120/ss_236f68d8b1a0c891b401689fcd0e9030f6550b74.1920x1080.jpg?t=1701947072" alt="IXION" /></p>
+
+<p>Ixion was my big surprise of the last year. The soundtrack is amazing &amp; the style of the game is gorgeous.</p>
+
+<p><img src="https://cdn.akamai.steamstatic.com/steam/apps/1113120/ss_1e633861f899ece1221ce6da6c892a9a706ac359.1920x1080.jpg?t=1701947072" alt="IXION" /></p>
+
+<p>And honestly that bad boy is Incredible.</p>
+
+<h3 id="what-will-differentiate-us-from-them-">What will differentiate us from them ?</h3>
+
+<p>We are still exploring ideas, we will iterate on mechanics that will make us unique …</p>
+
+<p>That will be explained and communicated in the future blogs. 
+For now We are working hard on the technicals challenges we are facing. So you will have to be patient to see what we are doing.</p>
+
+<p>What have already been communicated :</p>
+<ul>
+  <li>Planetary building in a similar way than of Dyson Sphere Program</li>
+  <li>Multiplayer is a “We want it” item on our todo list while not yet being worked on we are building the game with this in mind and the code is made so we will start implementation on that front soon™</li>
+  <li>Factory &amp; automation is going to be core</li>
+  <li>spaghetti ?</li>
+</ul>
+
+<p>Speaking of ! In the next DevLog, we are going to talk about spaghetti.</p>
+
+<p>Until then, you can join <a href="https://discord.gg/sXrYTmXekC">Our Brand new Discord</a> to learn more about the project, chat, share ideas &amp; meet the dev team !</p>
+
+<p>Touhma</p>]]></content><author><name>Touhma</name></author><category term="Announcements" /><summary type="html"><![CDATA[So It Begin …]]></summary></entry></feed>
