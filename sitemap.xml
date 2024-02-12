@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>touhma.github.io/announcements/2024/02/12/The-Playtypus-Experiment-0.html</loc>
+<loc>playtypusgames.github.io/announcements/2024/02/12/The-Playtypus-Experiment-0.html</loc>
 <lastmod>2024-02-12T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>touhma.github.io/about/</loc>
+<loc>playtypusgames.github.io/about/</loc>
 </url>
 <url>
-<loc>touhma.github.io/</loc>
+<loc>playtypusgames.github.io/</loc>
+</url>
+<url>
+<loc>playtypusgames.github.io/about/</loc>
+<lastmod>2024-02-12T11:45:11-05:00</lastmod>
+</url>
+<url>
+<loc>playtypusgames.github.io/announcements/2024/02/12/The-Playtypus-Experiment-0.html</loc>
+<lastmod>2024-02-12T11:45:11-05:00</lastmod>
 </url>
 </urlset>
