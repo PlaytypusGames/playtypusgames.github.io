@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.4">Jekyll</generator><link href="playtypusgames.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="playtypusgames.github.io/" rel="alternate" type="text/html" /><updated>2024-02-19T13:35:17-05:00</updated><id>playtypusgames.github.io/feed.xml</id><title type="html">PlaytypusGames</title><subtitle>We are here to make good Games</subtitle><entry><title type="html">The Playtypus Experiment TPE2</title><link href="playtypusgames.github.io/belts/2024/02/19/The-Playtypus-Experiment-2.html" rel="alternate" type="text/html" title="The Playtypus Experiment TPE2" /><published>2024-02-19T13:00:00-05:00</published><updated>2024-02-19T13:00:00-05:00</updated><id>playtypusgames.github.io/belts/2024/02/19/The-Playtypus-Experiment-2</id><content type="html" xml:base="playtypusgames.github.io/belts/2024/02/19/The-Playtypus-Experiment-2.html"><![CDATA[<h2 id="progress-report">Progress Report</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.4">Jekyll</generator><link href="playtypusgames.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="playtypusgames.github.io/" rel="alternate" type="text/html" /><updated>2024-02-19T13:46:04-05:00</updated><id>playtypusgames.github.io/feed.xml</id><title type="html">PlaytypusGames</title><subtitle>We are here to make good Games</subtitle><entry><title type="html">The Playtypus Experiment TPE2</title><link href="playtypusgames.github.io/belts/2024/02/19/The-Playtypus-Experiment-2.html" rel="alternate" type="text/html" title="The Playtypus Experiment TPE2" /><published>2024-02-19T13:00:00-05:00</published><updated>2024-02-19T13:00:00-05:00</updated><id>playtypusgames.github.io/belts/2024/02/19/The-Playtypus-Experiment-2</id><content type="html" xml:base="playtypusgames.github.io/belts/2024/02/19/The-Playtypus-Experiment-2.html"><![CDATA[<h2 id="progress-report">Progress Report</h2>
 
 <p>This last month, Inno &amp; I have been working ass on a few topics :</p>
 
@@ -36,7 +36,7 @@
 
 <p>With all the kind of solutions we thought about, given the scale of the game we want to make we went with a very satisfactory-like method of building conveyors.</p>
 
-<p><img src="../assets/Images/PlaytypusExperiment/TPE2/ConveyorBelt.png" alt="ConveyorBelt" /></p>
+<p><img src="https://playtypusgames.github.io/assets/Images/PlaytypusExperiment/TPE2/ConveyorBelt.png" alt="ConveyorBelt" /></p>
 
 <p>Note the blue &amp; orange arrow , this is important for later.</p>
 
@@ -72,10 +72,10 @@ Each building that have stuff to do with belt is going to have at least one sock
 And a socket can be of 2 types :</p>
 
 <p>Input : 
-<img src="../assets/Images/PlaytypusExperiment/TPE2/InputSocket.png" alt="InputSocket" /></p>
+<img src="https://playtypusgames.github.io/assets/Images/PlaytypusExperiment/TPE2/InputSocket.png" alt="InputSocket" /></p>
 
 <p>Or Output : 
-<img src="../assets/Images/PlaytypusExperiment/TPE2/OutputSocket.png" alt="OutputSocket" /></p>
+<img src="https://playtypusgames.github.io/assets/Images/PlaytypusExperiment/TPE2/OutputSocket.png" alt="OutputSocket" /></p>
 
 <p>Asset Temporary, remember ?</p>
 
@@ -83,13 +83,13 @@ And a socket can be of 2 types :</p>
 
 <p>We are going full on satisfactory on that ( remember to play that gem, it’s great ) we want to introduce you to …</p>
 
-<p><img src="../assets/Images/PlaytypusExperiment/TPE2/ConveyorPole.png" alt="ConveyorPole" /></p>
+<p><img src="https://playtypusgames.github.io/assets/Images/PlaytypusExperiment/TPE2/ConveyorPole.png" alt="ConveyorPole" /></p>
 
 <p>Basically a simple building with 2 sockets : an Input &amp; an Output.</p>
 
 <p>Here is how it look at the begining of the belt :</p>
 
-<p><img src="../assets/Images/PlaytypusExperiment/TPE2/BeltInput.png" alt="BeltInput" /></p>
+<p><img src="https://playtypusgames.github.io/assets/Images/PlaytypusExperiment/TPE2/BeltInput.png" alt="BeltInput" /></p>
 
 <p>And when you build it :</p>
 
