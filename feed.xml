@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.4">Jekyll</generator><link href="playtypusgames.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="playtypusgames.github.io/" rel="alternate" type="text/html" /><updated>2024-02-19T14:02:02-05:00</updated><id>playtypusgames.github.io/feed.xml</id><title type="html">PlaytypusGames</title><subtitle>We are here to make good Games</subtitle><entry><title type="html">The Playtypus Experiment TPE2</title><link href="playtypusgames.github.io/belts/2024/02/19/The-Playtypus-Experiment-2.html" rel="alternate" type="text/html" title="The Playtypus Experiment TPE2" /><published>2024-02-19T13:00:00-05:00</published><updated>2024-02-19T13:00:00-05:00</updated><id>playtypusgames.github.io/belts/2024/02/19/The-Playtypus-Experiment-2</id><content type="html" xml:base="playtypusgames.github.io/belts/2024/02/19/The-Playtypus-Experiment-2.html"><![CDATA[<h2 id="progress-report">Progress Report</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.4">Jekyll</generator><link href="playtypusgames.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="playtypusgames.github.io/" rel="alternate" type="text/html" /><updated>2024-02-19T14:03:16-05:00</updated><id>playtypusgames.github.io/feed.xml</id><title type="html">PlaytypusGames</title><subtitle>We are here to make good Games</subtitle><entry><title type="html">The Playtypus Experiment TPE2</title><link href="playtypusgames.github.io/belts/2024/02/19/The-Playtypus-Experiment-2.html" rel="alternate" type="text/html" title="The Playtypus Experiment TPE2" /><published>2024-02-19T13:00:00-05:00</published><updated>2024-02-19T13:00:00-05:00</updated><id>playtypusgames.github.io/belts/2024/02/19/The-Playtypus-Experiment-2</id><content type="html" xml:base="playtypusgames.github.io/belts/2024/02/19/The-Playtypus-Experiment-2.html"><![CDATA[<h2 id="progress-report">Progress Report</h2>
 
 <p>This last month, Inno &amp; I have been working ass on a few topics :</p>
 
@@ -10,6 +10,7 @@
   <li>Learning about UI Toolkit</li>
   <li>Helped a Lot with the conveyor placement logic</li>
   <li>Starting a skeleton of UI &amp; Experimenting &amp; iterating on a lot of Ideas for it.</li>
+  <li>Replacing the placeholder Input System with a more robust one</li>
   <li>Worked on the conveyor Flow to add some conditions on how they should be placed.</li>
 </ul>
 
