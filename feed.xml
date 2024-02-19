@@ -1,4 +1,141 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.4">Jekyll</generator><link href="playtypusgames.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="playtypusgames.github.io/" rel="alternate" type="text/html" /><updated>2024-02-12T17:53:19-05:00</updated><id>playtypusgames.github.io/feed.xml</id><title type="html">PlaytypusGames</title><subtitle>We are here to make good Games</subtitle><entry><title type="html">The Playtypus Experiment #1</title><link href="playtypusgames.github.io/belts/2024/02/12/The-Playtypus-Experiment-1.html" rel="alternate" type="text/html" title="The Playtypus Experiment #1" /><published>2024-02-12T17:00:00-05:00</published><updated>2024-02-12T17:00:00-05:00</updated><id>playtypusgames.github.io/belts/2024/02/12/The-Playtypus-Experiment-1</id><content type="html" xml:base="playtypusgames.github.io/belts/2024/02/12/The-Playtypus-Experiment-1.html"><![CDATA[<h1 id="a-story-about-conveyors---part-1">A story about Conveyors - Part 1</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.4">Jekyll</generator><link href="playtypusgames.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="playtypusgames.github.io/" rel="alternate" type="text/html" /><updated>2024-02-19T13:26:59-05:00</updated><id>playtypusgames.github.io/feed.xml</id><title type="html">PlaytypusGames</title><subtitle>We are here to make good Games</subtitle><entry><title type="html">The Playtypus Experiment #2</title><link href="playtypusgames.github.io/belts/2024/02/19/The-Playtypus-Experiment-2.html" rel="alternate" type="text/html" title="The Playtypus Experiment #2" /><published>2024-02-19T13:00:00-05:00</published><updated>2024-02-19T13:00:00-05:00</updated><id>playtypusgames.github.io/belts/2024/02/19/The-Playtypus-Experiment-2</id><content type="html" xml:base="playtypusgames.github.io/belts/2024/02/19/The-Playtypus-Experiment-2.html"><![CDATA[<h2 id="progress-report">Progress Report</h2>
+
+<p>This last month, Inno &amp; I have been working ass on a few topics :</p>
+
+<p>Inno :</p>
+<ul>
+  <li>Onboarding on the project</li>
+  <li>Learning about Shaders</li>
+  <li>Learning about ECS &amp; Dots</li>
+  <li>Learning about UI Toolkit</li>
+  <li>Helped a Lot with the conveyor placement logic</li>
+  <li>Starting a skeleton of UI &amp; Experimenting &amp; iterating on a lot of Ideas for it.</li>
+  <li>Worked on the conveyor Flow to add some conditions on how they should be placed.</li>
+</ul>
+
+<p>Touhma :</p>
+<ul>
+  <li>Finishing the base for the framework for the factory stuff ( Recipes , Buildings, Items )</li>
+  <li>With long talks with Inno refactored the entire conveyor building logic to make it easier to work with</li>
+  <li>A lot of optimisation on critical part of the code ( Items on Belts etc … )</li>
+  <li>Refactoring of the codebase in progress to reduce garbage code &amp; reduce the complexity of the project</li>
+  <li>Merging codebase of utilitary customs libraries with our project code base &amp; add AssemblyDefinitions to split the codebase into bittable chunks</li>
+</ul>
+
+<p>The foundations are there and we are making sure that we can confortably add more features in the long run.</p>
+
+<p>We had to take some time too to make sure we were globaly on the same page with the project as we are going to work together on long run on that.</p>
+
+<h1 id="a-story-about-conveyors---part-2">A story about Conveyors - Part 2</h1>
+
+<h3 id="1---satisfactory-like">1 - Satisfactory Like</h3>
+
+<blockquote>
+  <p>So ? what did you decide to go with ?</p>
+</blockquote>
+
+<p>With all the kind of solutions we thought about, given the scale of the game we want to make we went with a very satisfactory-like method of building conveyors.</p>
+
+<p><img src="../assets/Images/PlaytypusExperiment/%232/ConveyorBelt.png" alt="img.png" /></p>
+
+<p>Note the blue &amp; orange arrow , this is important for later.</p>
+
+<blockquote>
+  <p>that’s it ?</p>
+</blockquote>
+
+<p>Patience ! All assets that you are going to see are basically work in progress &amp; temporary assets, We are still looking for someone to help us in that department !</p>
+
+<p>Sooooo we decided on , for multiples reasons, to go with a belt that is based on a spline. ( cf <a href="https://playtypusgames.github.io/belts/2024/02/12/The-Playtypus-Experiment-1.html">TPE#1</a>) 
+It is designed to be simple but flexible for a lot of usecases we have in mind for the game. 
+We spend quite a fair amount of time to get it right.</p>
+
+<blockquote>
+  <p>What about the arrows ?</p>
+</blockquote>
+
+<p>So here is a thing, for the belt here are the ground rules :</p>
+<ul>
+  <li>A belt can be build ONLY between “sockets” .</li>
+  <li>A belt can have a starting point &amp; an end point.</li>
+  <li>A belt can’t have a socket on it’s own.</li>
+  <li>The spline is the thing that, later, will be saved on the save file, not the mesh.</li>
+  <li>The mesh is dynamically generated between these points by the client.</li>
+</ul>
+
+<blockquote>
+  <p>Still don’t answer my question … And … A socket ?</p>
+</blockquote>
+
+<p>A Socket is basically going to be one point that accept a belt. 
+Each building that have stuff to do with belt is going to have at least one socket on them.
+And a socket can be of 2 types :</p>
+
+<p>Input : 
+<img src="../assets/Images/PlaytypusExperiment/%232/InputSocket.png" alt="InputSocket" /></p>
+
+<p>Or Output : 
+<img src="../assets/Images/PlaytypusExperiment/%232/OutputSocket.png" alt="OutputSocket" /></p>
+
+<p>Asset Temporary, remember ?</p>
+
+<p>And because the belt can’t have sockets on it</p>
+
+<p>We are going full on satisfactory on that ( remember to play that gem, it’s great ) we want to introduce you to …</p>
+
+<p><img src="../assets/Images/PlaytypusExperiment/%232/ConveyorPole.png" alt="ConveyorPole" /></p>
+
+<p>Basically a simple building with 2 sockets : an Input &amp; an Output.</p>
+
+<p>Here is how it look at the begining of the belt :</p>
+
+<p><img src="../assets/Images/PlaytypusExperiment/%232/BeltInput.png" alt="BeltInput" /></p>
+
+<p>And when you build it :</p>
+
+<video width="100%" autoplay="autoplay" loop="true" muted="">
+  <source src="https://playtypusgames.github.io/assets/Images/PlaytypusExperiment/%232/ConveyorBeltsShowcase.mp4" type="video/mp4" />
+</video>
+
+<p>Note that you do have two poles In that example.</p>
+
+<video width="100%" autoplay="autoplay" loop="true" muted="">
+  <source src="https://playtypusgames.github.io/assets/Images/PlaytypusExperiment/%232/ConveyorBeltsShowcase2.mp4" type="video/mp4" />
+</video>
+
+<p>The system is flexible enough to actually just care if you are connected to a socket or not &amp; we do have an API allowing us to get more information from there, after.</p>
+
+<p>We are going to show more in the nexts following blogs</p>
+
+<blockquote>
+  <p>Wait but do the belts do … the thing ?</p>
+</blockquote>
+
+<p>What thing ?</p>
+
+<blockquote>
+  <p>You know … The thing …</p>
+</blockquote>
+
+<p>That ?</p>
+
+<video width="100%" autoplay="autoplay" loop="true" muted="">
+  <source src="https://playtypusgames.github.io/assets/Images/PlaytypusExperiment/%232/ConveyorBeltsShowcase3.mp4" type="video/mp4" />
+</video>
+
+<blockquote>
+  <p>Yes !</p>
+</blockquote>
+
+<p>Welp , obviously … that’s going to be the whole theme of the game …</p>
+
+<p>On that note.</p>
+
+<p>Don’t forget to join <a href="https://discord.gg/sXrYTmXekC">Our Brand new Discord</a> to learn more about the project , share your comment in the forum space there &amp; tutti frutti !</p>
+
+<p>Take care everyone and see you next week !</p>
+
+<p>Touhma</p>]]></content><author><name>Touhma</name></author><category term="Belts" /><summary type="html"><![CDATA[Progress Report]]></summary></entry><entry><title type="html">The Playtypus Experiment #1</title><link href="playtypusgames.github.io/belts/2024/02/12/The-Playtypus-Experiment-1.html" rel="alternate" type="text/html" title="The Playtypus Experiment #1" /><published>2024-02-12T17:00:00-05:00</published><updated>2024-02-12T17:00:00-05:00</updated><id>playtypusgames.github.io/belts/2024/02/12/The-Playtypus-Experiment-1</id><content type="html" xml:base="playtypusgames.github.io/belts/2024/02/12/The-Playtypus-Experiment-1.html"><![CDATA[<h1 id="a-story-about-conveyors---part-1">A story about Conveyors - Part 1</h1>
 
 <h2 id="the-beginning">The Beginning</h2>
 
