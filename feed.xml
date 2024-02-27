@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.4">Jekyll</generator><link href="playtypusgames.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="playtypusgames.github.io/" rel="alternate" type="text/html" /><updated>2024-02-19T14:28:57-05:00</updated><id>playtypusgames.github.io/feed.xml</id><title type="html">PlaytypusGames</title><subtitle>We are here to make good Games</subtitle><entry><title type="html">The Playtypus Experiment #2</title><link href="playtypusgames.github.io/belts/2024/02/19/The-Playtypus-Experiment-2.html" rel="alternate" type="text/html" title="The Playtypus Experiment #2" /><published>2024-02-19T13:00:00-05:00</published><updated>2024-02-19T13:00:00-05:00</updated><id>playtypusgames.github.io/belts/2024/02/19/The-Playtypus-Experiment-2</id><content type="html" xml:base="playtypusgames.github.io/belts/2024/02/19/The-Playtypus-Experiment-2.html"><![CDATA[<h2 id="progress-report">Progress Report</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.4">Jekyll</generator><link href="playtypusgames.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="playtypusgames.github.io/" rel="alternate" type="text/html" /><updated>2024-02-26T19:07:28-05:00</updated><id>playtypusgames.github.io/feed.xml</id><title type="html">PlaytypusGames</title><subtitle>We are here to make good Games</subtitle><entry><title type="html">The Playtypus Experiment #3</title><link href="playtypusgames.github.io/random/2024/02/26/The-Playtypus-Experiment-3.html" rel="alternate" type="text/html" title="The Playtypus Experiment #3" /><published>2024-02-26T13:00:00-05:00</published><updated>2024-02-26T13:00:00-05:00</updated><id>playtypusgames.github.io/random/2024/02/26/The-Playtypus-Experiment-3</id><content type="html" xml:base="playtypusgames.github.io/random/2024/02/26/The-Playtypus-Experiment-3.html"><![CDATA[<h2 id="progress-report">Progress Report</h2>
+
+<p>This last week, both our weeks have been loaded with our main jobs…</p>
+
+<p>So no big blog post today as neither of us could find the time to work on the game AND write a decent blog post.</p>
+
+<p>We still have managed to make some progress :</p>
+
+<p>Inno :</p>
+<ul>
+  <li>Still Experimenting with UI Toolkit &amp; creating more screens.</li>
+  <li>More Work into the UI WorkFlow</li>
+  <li>More Work into the Input Management Workflow</li>
+  <li>Currently working on some UI for some buildings.</li>
+</ul>
+
+<p>Touhma :</p>
+<ul>
+  <li>Refactored a lot of the code base to make most of the code burst compatible &amp; multi-thread friendly-ish.</li>
+  <li>Experimentation of solutions for Lighting. ( yep, I know, random light stuff here ! )</li>
+  <li>Work is being started on net code for entity prototyping.( Multiplayer )</li>
+  <li>BugFixing on the Factory Framework. We found a few bugs the showed a weakness into the flow. ( I’ll write something about that god-forsaken flow … )</li>
+</ul>
+
+<p>Don’t forget to join <a href="https://discord.gg/sXrYTmXekC">Our Brand new Discord</a> to learn more about the project , share your comment in the forum space there &amp; tutti frutti !</p>
+
+<p>Take care everyone and see you next week !</p>
+
+<p>Touhma</p>]]></content><author><name>Touhma</name></author><category term="Random" /><summary type="html"><![CDATA[Progress Report]]></summary></entry><entry><title type="html">The Playtypus Experiment #2</title><link href="playtypusgames.github.io/belts/2024/02/19/The-Playtypus-Experiment-2.html" rel="alternate" type="text/html" title="The Playtypus Experiment #2" /><published>2024-02-19T13:00:00-05:00</published><updated>2024-02-19T13:00:00-05:00</updated><id>playtypusgames.github.io/belts/2024/02/19/The-Playtypus-Experiment-2</id><content type="html" xml:base="playtypusgames.github.io/belts/2024/02/19/The-Playtypus-Experiment-2.html"><![CDATA[<h2 id="progress-report">Progress Report</h2>
 
 <p>This last month, Inno &amp; I have been working ass on a few topics :</p>
 
