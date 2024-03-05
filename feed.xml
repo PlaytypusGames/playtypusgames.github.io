@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.4">Jekyll</generator><link href="playtypusgames.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="playtypusgames.github.io/" rel="alternate" type="text/html" /><updated>2024-03-04T20:55:46-05:00</updated><id>playtypusgames.github.io/feed.xml</id><title type="html">PlaytypusGames</title><subtitle>We are here to make good Games</subtitle><entry><title type="html">The Playtypus Experiment #4</title><link href="playtypusgames.github.io/random/2024/03/04/The-Playtypus-Experiment-4.html" rel="alternate" type="text/html" title="The Playtypus Experiment #4" /><published>2024-03-04T13:00:00-05:00</published><updated>2024-03-04T13:00:00-05:00</updated><id>playtypusgames.github.io/random/2024/03/04/The-Playtypus-Experiment-4</id><content type="html" xml:base="playtypusgames.github.io/random/2024/03/04/The-Playtypus-Experiment-4.html"><![CDATA[<h2 id="progress-report-2">Progress Report #2</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.4">Jekyll</generator><link href="playtypusgames.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="playtypusgames.github.io/" rel="alternate" type="text/html" /><updated>2024-03-04T21:01:23-05:00</updated><id>playtypusgames.github.io/feed.xml</id><title type="html">PlaytypusGames</title><subtitle>We are here to make good Games</subtitle><entry><title type="html">The Playtypus Experiment #4</title><link href="playtypusgames.github.io/random/2024/03/04/The-Playtypus-Experiment-4.html" rel="alternate" type="text/html" title="The Playtypus Experiment #4" /><published>2024-03-04T13:00:00-05:00</published><updated>2024-03-04T13:00:00-05:00</updated><id>playtypusgames.github.io/random/2024/03/04/The-Playtypus-Experiment-4</id><content type="html" xml:base="playtypusgames.github.io/random/2024/03/04/The-Playtypus-Experiment-4.html"><![CDATA[<h2 id="progress-report-2">Progress Report #2</h2>
 
 <p>Hello There !</p>
 
@@ -6,7 +6,11 @@
 
 <p>I wanted to write about the pain I’m suffering rewriting / refactoring the Factory Systems for multiplayer But I have chosen to use my little free time doing some code on that.</p>
 
-<p>To sum it up : https://www.youtube.com/watch?v=AbSehcT19u0</p>
+<p>To sum it up :</p>
+
+<video width="100%" autoplay="autoplay" loop="true" muted="muted">
+  <source src="https://i.imgur.com/6zAPRPa.mp4" type="video/mp4" />
+</video>
 
 <p>You fix something 3 things break because you did not decoupled enough ^^ rhaaaaa I love the prototyping phase with new unity techs.</p>
 
@@ -33,7 +37,6 @@
     </ul>
   </li>
   <li>Updated the 1.2 ECS version &amp; Unity to 2023 -&gt; that fixed some annoying issues we had with our project.</li>
-  <li></li>
 </ul>
 
 <p>No screenshots for now but progress are made on that Front as fact as I can.</p>
