@@ -1,4 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.4">Jekyll</generator><link href="playtypusgames.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="playtypusgames.github.io/" rel="alternate" type="text/html" /><updated>2024-02-26T19:07:28-05:00</updated><id>playtypusgames.github.io/feed.xml</id><title type="html">PlaytypusGames</title><subtitle>We are here to make good Games</subtitle><entry><title type="html">The Playtypus Experiment #3</title><link href="playtypusgames.github.io/random/2024/02/26/The-Playtypus-Experiment-3.html" rel="alternate" type="text/html" title="The Playtypus Experiment #3" /><published>2024-02-26T13:00:00-05:00</published><updated>2024-02-26T13:00:00-05:00</updated><id>playtypusgames.github.io/random/2024/02/26/The-Playtypus-Experiment-3</id><content type="html" xml:base="playtypusgames.github.io/random/2024/02/26/The-Playtypus-Experiment-3.html"><![CDATA[<h2 id="progress-report">Progress Report</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.4">Jekyll</generator><link href="playtypusgames.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="playtypusgames.github.io/" rel="alternate" type="text/html" /><updated>2024-03-04T20:55:46-05:00</updated><id>playtypusgames.github.io/feed.xml</id><title type="html">PlaytypusGames</title><subtitle>We are here to make good Games</subtitle><entry><title type="html">The Playtypus Experiment #4</title><link href="playtypusgames.github.io/random/2024/03/04/The-Playtypus-Experiment-4.html" rel="alternate" type="text/html" title="The Playtypus Experiment #4" /><published>2024-03-04T13:00:00-05:00</published><updated>2024-03-04T13:00:00-05:00</updated><id>playtypusgames.github.io/random/2024/03/04/The-Playtypus-Experiment-4</id><content type="html" xml:base="playtypusgames.github.io/random/2024/03/04/The-Playtypus-Experiment-4.html"><![CDATA[<h2 id="progress-report-2">Progress Report #2</h2>
+
+<p>Hello There !</p>
+
+<p>It’s Touhma.</p>
+
+<p>I wanted to write about the pain I’m suffering rewriting / refactoring the Factory Systems for multiplayer But I have chosen to use my little free time doing some code on that.</p>
+
+<p>To sum it up : https://www.youtube.com/watch?v=AbSehcT19u0</p>
+
+<p>You fix something 3 things break because you did not decoupled enough ^^ rhaaaaa I love the prototyping phase with new unity techs.</p>
+
+<p>This is the perfect TLDR for what happened since the last Blog, for me At least.</p>
+
+<p>In a longer Version here is what happened on my side :</p>
+<ul>
+  <li>Pain when learning about Netcode for Entities with the lack of proper straightforward cookbook.</li>
+  <li>Existential crisis when I realized more than half of our system were not flexible enough to be used in a Client-Server environment.</li>
+  <li>Refactored for the third time our code base to implement stuff that were going to be a huge pain in the future , including but not only :
+    <ul>
+      <li>Proper separation of responsibilities between client / server simulation ( not battle tested yet , but looks promising now )</li>
+      <li>Splitting the responsibilities between the systems that take care of placing the buildings &amp; the conveyors ( it’s easy AF to place a building , but not as easy to place a conveyor )</li>
+      <li>Limiting the use of global singletons for the placement of buildings &amp; the previewing of said conveyors &amp; buildings</li>
+    </ul>
+  </li>
+  <li>First real prototype of project with Netcode in it. Meaning : Client &amp; Server running &amp; connecting &amp; synchronizing. ( not perfect but making progress on that front )</li>
+  <li>During the cleaning &amp; streamlining of the placement system I removed a LOT of either useless or duplicated code that were hidden in helpers functions.</li>
+  <li>Renaming all our Global &amp; Factory SystemGroups &amp; Systems So it’s clear what they do.</li>
+  <li>Made Most of the system not care about the numbers of previews on screen.
+    <ul>
+      <li>Some Are responsible for the current player preview data</li>
+      <li>Some are taking care of all the data processing for everything else ( all preview collisions check, Spline calculations, Mesh generation for the conveyors, Preview materials applications etc … )</li>
+    </ul>
+  </li>
+  <li>Updated the 1.2 ECS version &amp; Unity to 2023 -&gt; that fixed some annoying issues we had with our project.</li>
+  <li></li>
+</ul>
+
+<p>No screenshots for now but progress are made on that Front as fact as I can.</p>
+
+<p>Boy, I’m glad I’ve started Netcode now. 6 months later it would have been a wall that would have hit us really bad.</p>
+
+<p>On Inno Side :</p>
+
+<ul>
+  <li>The UI basic wireframe is moving well. 
+It’s not show-able because it’s ugly as fuck for now but improvement are being made when he has time.</li>
+  <li>Figured out a good way of leveraging the Unity Addressable System to load in a nice way the assets in the game. ( I used that in a previous project &amp; that did wonder, finger crossed it’s going to be the same )</li>
+  <li>Fonts Experiments</li>
+  <li>Better building bar UI</li>
+  <li>Streamlined the systems taking care of the UI leveraging ECS pattern ( a pain to do but the results are nice ! )</li>
+  <li>Experimenting &amp; Building the skeleton of a Research System.</li>
+</ul>
+
+<p>On the general Team :</p>
+
+<ul>
+  <li>We have a friend of mine that agreed to spend a bit of his free time to make use some rendering &amp; 3D visuals to help us. ( it’s going to take time but it’s better than nothing &amp; the result are promising )</li>
+  <li>Inno Has a good grasp of what’s happening with ECS and get more efficient &amp; he is taking care of stuff without too much troubles now :D</li>
+  <li>We are still looking for a 3D artist to help us. If you know someone serious lemme know on Discord :)</li>
+</ul>
+
+<p>Hopefully we will have more to show pretty soon. In the meantime don’t forget to join <a href="https://discord.gg/sXrYTmXekC">Our Brand new Discord</a> to learn more about the project , share your comment in the forum space there &amp; spaghetti  !</p>
+
+<p>Take care everyone and see you next week !</p>
+
+<p>Touhma</p>]]></content><author><name>Touhma</name></author><category term="Random" /><summary type="html"><![CDATA[Progress Report #2]]></summary></entry><entry><title type="html">The Playtypus Experiment #3</title><link href="playtypusgames.github.io/random/2024/02/26/The-Playtypus-Experiment-3.html" rel="alternate" type="text/html" title="The Playtypus Experiment #3" /><published>2024-02-26T13:00:00-05:00</published><updated>2024-02-26T13:00:00-05:00</updated><id>playtypusgames.github.io/random/2024/02/26/The-Playtypus-Experiment-3</id><content type="html" xml:base="playtypusgames.github.io/random/2024/02/26/The-Playtypus-Experiment-3.html"><![CDATA[<h2 id="progress-report">Progress Report</h2>
 
 <p>This last week, both our weeks have been loaded with our main jobs…</p>
 
