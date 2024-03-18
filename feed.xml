@@ -1,4 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.4">Jekyll</generator><link href="playtypusgames.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="playtypusgames.github.io/" rel="alternate" type="text/html" /><updated>2024-03-04T21:06:01-05:00</updated><id>playtypusgames.github.io/feed.xml</id><title type="html">PlaytypusGames</title><subtitle>We are here to make good Games</subtitle><entry><title type="html">The Playtypus Experiment #4</title><link href="playtypusgames.github.io/random/2024/03/04/The-Playtypus-Experiment-4.html" rel="alternate" type="text/html" title="The Playtypus Experiment #4" /><published>2024-03-04T13:00:00-05:00</published><updated>2024-03-04T13:00:00-05:00</updated><id>playtypusgames.github.io/random/2024/03/04/The-Playtypus-Experiment-4</id><content type="html" xml:base="playtypusgames.github.io/random/2024/03/04/The-Playtypus-Experiment-4.html"><![CDATA[<h2 id="progress-report-4">Progress Report #4</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.4">Jekyll</generator><link href="playtypusgames.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="playtypusgames.github.io/" rel="alternate" type="text/html" /><updated>2024-03-18T14:42:28-04:00</updated><id>playtypusgames.github.io/feed.xml</id><title type="html">PlaytypusGames</title><subtitle>We are here to make good Games</subtitle><entry><title type="html">The Playtypus Experiment #5</title><link href="playtypusgames.github.io/random/2024/03/18/The-Playtypus-Experiment-5.html" rel="alternate" type="text/html" title="The Playtypus Experiment #5" /><published>2024-03-18T14:00:00-04:00</published><updated>2024-03-18T14:00:00-04:00</updated><id>playtypusgames.github.io/random/2024/03/18/The-Playtypus-Experiment-5</id><content type="html" xml:base="playtypusgames.github.io/random/2024/03/18/The-Playtypus-Experiment-5.html"><![CDATA[<h2 id="a-word-about-networking">A word about networking</h2>
+
+<p>Hey there , It’s been a while !</p>
+
+<p>This had been a few busy weeks. We have been focusing a LOT on Multiplayer and what that mean for the development.</p>
+
+<p>First of all, I owe an apology to all the multiplayer games I’ve played and complained about their netcode saying: It’s not that complicated.</p>
+
+<p>Welp, turns out it’s a nightmare to make a game running perfectly over a network.</p>
+
+<p>My god, we are so much behind this initial plan that we will have to rethink our timeline a little bit…</p>
+
+<p>So during the last few weeks we have been researching, first, a tool to help us make the game we want to make working in multiplayer.</p>
+
+<p>We experimented with Netcode for Entities, beautifully made solution by the unity team, with a minor caveat… We can’t use it for our game.</p>
+
+<p>You see, Netcode for Entities is great when it to make action packed games , like MOBA &amp; Shooters, but it’s lacking a few key features we need to make a planetary factory synced in multiplayer.</p>
+
+<p>We explored other option but after a while we had to come to the conclusion that we will need to create our own solution on top of Unity Transport.</p>
+
+<h2 id="what-we-think-we-need">What we think we need</h2>
+
+<p>So far here are our requirements :</p>
+
+<ul>
+  <li>Deterministic simulation on both client &amp; server -&gt; this is going to be a bigger nightmare we think.</li>
+  <li>Tick System -&gt; Should be easy enough</li>
+  <li>Messaging System over the network -&gt; Almost there</li>
+  <li>A Catch-up System -&gt; We have a few ideas to limit the need for it.</li>
+</ul>
+
+<p>The idea will be to have what’s called a LockStep Simulation, seeing that we do not have competition &amp; we don’t care about cheating in our game ( have fun everyone ! ) 
+There are actually no points having any safety at all in the game.</p>
+
+<p>What we need tho is to be able to send input from a player to the server, and then replicate it over the network in a timely manner and that these input give you the same simulation result as to your friends.</p>
+
+<p>Believe me when i’m saying this … it’s not easy.</p>
+
+<h2 id="what-we-do-now-">What we do now ?</h2>
+
+<p>We are currently heavily experimenting with networking. We tinker here and there. We get some wins and some losses. But we are learning a lot in the process. 
+The main issue is : it’s taking forever to get things working due to our inexperience as network developers.</p>
+
+<p>We think we have the foundation for the messaging system between the client &amp; server figured out. 
+Not sure if it’s the best way of doing it but worst case we will be able to change that later.</p>
+
+<p>Why is it taking that much time ? it’s because if that brick is not solid enough, anything we are gonna do on top of that is at risk of crumbling later down in the development of the game.</p>
+
+<p>Once that part is wrapped we will move to the tick &amp; catch up system.</p>
+
+<h2 id="progress-report-">Progress Report :</h2>
+
+<p>As I said we mostly focus on networking for now and it will be a while until this part is ready. Without that brick, no multiplayer in the game. 
+If we continue developing more feature for the game without it’s going to be incrementally harder and harder to make things work together once we get there.</p>
+
+<p>So the short version is :</p>
+<ul>
+  <li>Studied how things are done in Netcode for entities.</li>
+  <li>Experimenting to replicate what we need without polluting the solution with other useless features we don’t need.</li>
+  <li>Coding , Doing &amp; redoing network stuff.</li>
+</ul>
+
+<p>Hopefully it is going to continue in the right direction.</p>
+
+<p>Take care everyone and see you next week !</p>
+
+<p>Touhma</p>]]></content><author><name>Touhma</name></author><category term="Random" /><summary type="html"><![CDATA[A word about networking]]></summary></entry><entry><title type="html">The Playtypus Experiment #4</title><link href="playtypusgames.github.io/random/2024/03/04/The-Playtypus-Experiment-4.html" rel="alternate" type="text/html" title="The Playtypus Experiment #4" /><published>2024-03-04T13:00:00-05:00</published><updated>2024-03-04T13:00:00-05:00</updated><id>playtypusgames.github.io/random/2024/03/04/The-Playtypus-Experiment-4</id><content type="html" xml:base="playtypusgames.github.io/random/2024/03/04/The-Playtypus-Experiment-4.html"><![CDATA[<h2 id="progress-report-4">Progress Report #4</h2>
 
 <p>Hello There !</p>
 
