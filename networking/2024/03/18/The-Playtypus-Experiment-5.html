@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>The Playtypus Experiment #4 - PlaytypusGames</title>
-<meta name="description" content="Progress Report #4">
+<!-- begin _includes/seo.html --><title>The Playtypus Experiment #5 - PlaytypusGames</title>
+<meta name="description" content="A word about networking">
 
 
   <meta name="author" content="Touhma">
@@ -22,26 +22,26 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="PlaytypusGames">
-<meta property="og:title" content="The Playtypus Experiment #4">
-<meta property="og:url" content="playtypusgames.github.io/random/2024/03/04/The-Playtypus-Experiment-4.html">
+<meta property="og:title" content="The Playtypus Experiment #5">
+<meta property="og:url" content="playtypusgames.github.io/networking/2024/03/18/The-Playtypus-Experiment-5.html">
 
 
-  <meta property="og:description" content="Progress Report #4">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2024-03-04T13:00:00-05:00">
+  <meta property="og:description" content="A word about networking">
 
 
 
 
 
 
-<link rel="canonical" href="playtypusgames.github.io/random/2024/03/04/The-Playtypus-Experiment-4.html">
+
+  <meta property="article:published_time" content="2024-03-18T14:00:00-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="playtypusgames.github.io/networking/2024/03/18/The-Playtypus-Experiment-5.html">
 
 
 
@@ -246,15 +246,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="The Playtypus Experiment #4">
-    <meta itemprop="description" content="Progress Report #4">
-    <meta itemprop="datePublished" content="2024-03-04T13:00:00-05:00">
+    <meta itemprop="headline" content="The Playtypus Experiment #5">
+    <meta itemprop="description" content="A word about networking">
+    <meta itemprop="datePublished" content="2024-03-18T14:00:00-04:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">The Playtypus Experiment #4
+          <h1 id="page-title" class="page__title" itemprop="headline">The Playtypus Experiment #5
 </h1>
           
 
@@ -282,72 +282,69 @@
 
       <section class="page__content" itemprop="text">
         
-        <h2 id="progress-report-4">Progress Report #4</h2>
+        <h2 id="a-word-about-networking">A word about networking</h2>
 
-<p>Hello There !</p>
+<p>Hey there , It’s been a while !</p>
 
-<p>It’s Touhma.</p>
+<p>This had been a few busy weeks. We have been focusing a LOT on Multiplayer and what that mean for the development.</p>
 
-<p>I wanted to write about the pain I’m suffering rewriting / refactoring the Factory Systems for multiplayer But I have chosen to use my little free time doing some code on that.</p>
+<p>First of all, I owe an apology to all the multiplayer games I’ve played and complained about their netcode saying: It’s not that complicated.</p>
 
-<p>To sum it up :</p>
+<p>Welp, turns out it’s a nightmare to make a game running perfectly over a network.</p>
 
-<video width="100%" autoplay="autoplay" loop="true" muted="muted">
-  <source src="https://i.imgur.com/6zAPRPa.mp4" type="video/mp4" />
-</video>
+<p>My god, we are so much behind this initial plan that we will have to rethink our timeline a little bit…</p>
 
-<p>You fix something 3 things break because you did not decoupled enough ^^ rhaaaaa I love the prototyping phase with new unity techs.</p>
+<p>So during the last few weeks we have been researching, first, a tool to help us make the game we want to make working in multiplayer.</p>
 
-<p>This is the perfect TLDR for what happened since the last Blog, for me At least.</p>
+<p>We experimented with Netcode for Entities, beautifully made solution by the unity team, with a minor caveat… We can’t use it for our game.</p>
 
-<p>In a longer Version here is what happened on my side :</p>
-<ul>
-  <li>Pain when learning about Netcode for Entities with the lack of proper straightforward cookbook.</li>
-  <li>Existential crisis when I realized more than half of our system were not flexible enough to be used in a Client-Server environment.</li>
-  <li>Refactored for the third time our code base to implement stuff that were going to be a huge pain in the future , including but not only :
-    <ul>
-      <li>Proper separation of responsibilities between client / server simulation ( not battle tested yet , but looks promising now )</li>
-      <li>Splitting the responsibilities between the systems that take care of placing the buildings &amp; the conveyors ( it’s easy AF to place a building , but not as easy to place a conveyor )</li>
-      <li>Limiting the use of global singletons for the placement of buildings &amp; the previewing of said conveyors &amp; buildings</li>
-    </ul>
-  </li>
-  <li>First real prototype of project with Netcode in it. Meaning : Client &amp; Server running &amp; connecting &amp; synchronizing. ( not perfect but making progress on that front )</li>
-  <li>During the cleaning &amp; streamlining of the placement system I removed a LOT of either useless or duplicated code that were hidden in helpers functions.</li>
-  <li>Renaming all our Global &amp; Factory SystemGroups &amp; Systems So it’s clear what they do.</li>
-  <li>Made Most of the system not care about the numbers of previews on screen.
-    <ul>
-      <li>Some Are responsible for the current player preview data</li>
-      <li>Some are taking care of all the data processing for everything else ( all preview collisions check, Spline calculations, Mesh generation for the conveyors, Preview materials applications etc … )</li>
-    </ul>
-  </li>
-  <li>Updated the 1.2 ECS version &amp; Unity to 2023 -&gt; that fixed some annoying issues we had with our project.</li>
-</ul>
+<p>You see, Netcode for Entities is great when it to make action packed games , like MOBA &amp; Shooters, but it’s lacking a few key features we need to make a planetary factory synced in multiplayer.</p>
 
-<p>No screenshots for now but progress are made on that Front as fact as I can.</p>
+<p>We explored other option but after a while we had to come to the conclusion that we will need to create our own solution on top of Unity Transport.</p>
 
-<p>Boy, I’m glad I’ve started Netcode now. 6 months later it would have been a wall that would have hit us really bad.</p>
+<h2 id="what-we-think-we-need">What we think we need</h2>
 
-<p>On Inno Side :</p>
+<p>So far here are our requirements :</p>
 
 <ul>
-  <li>The UI basic wireframe is moving well. 
-It’s not show-able because it’s ugly as fuck for now but improvement are being made when he has time.</li>
-  <li>Figured out a good way of leveraging the Unity Addressable System to load in a nice way the assets in the game. ( I used that in a previous project &amp; that did wonder, finger crossed it’s going to be the same )</li>
-  <li>Fonts Experiments</li>
-  <li>Better building bar UI</li>
-  <li>Streamlined the systems taking care of the UI leveraging ECS pattern ( a pain to do but the results are nice ! )</li>
-  <li>Experimenting &amp; Building the skeleton of a Research System.</li>
+  <li>Deterministic simulation on both client &amp; server -&gt; this is going to be a bigger nightmare we think.</li>
+  <li>Tick System -&gt; Should be easy enough</li>
+  <li>Messaging System over the network -&gt; Almost there</li>
+  <li>A Catch-up System -&gt; We have a few ideas to limit the need for it.</li>
 </ul>
 
-<p>On the general Team :</p>
+<p>The idea will be to have what’s called a LockStep Simulation, seeing that we do not have competition &amp; we don’t care about cheating in our game ( have fun everyone ! ) 
+There are actually no points having any safety at all in the game.</p>
 
+<p>What we need tho is to be able to send input from a player to the server, and then replicate it over the network in a timely manner and that these input give you the same simulation result as to your friends.</p>
+
+<p>Believe me when i’m saying this … it’s not easy.</p>
+
+<h2 id="what-we-do-now-">What we do now ?</h2>
+
+<p>We are currently heavily experimenting with networking. We tinker here and there. We get some wins and some losses. But we are learning a lot in the process. 
+The main issue is : it’s taking forever to get things working due to our inexperience as network developers.</p>
+
+<p>We think we have the foundation for the messaging system between the client &amp; server figured out. 
+Not sure if it’s the best way of doing it but worst case we will be able to change that later.</p>
+
+<p>Why is it taking that much time ? it’s because if that brick is not solid enough, anything we are gonna do on top of that is at risk of crumbling later down in the development of the game.</p>
+
+<p>Once that part is wrapped we will move to the tick &amp; catch up system.</p>
+
+<h2 id="progress-report-">Progress Report :</h2>
+
+<p>As I said we mostly focus on networking for now and it will be a while until this part is ready. Without that brick, no multiplayer in the game. 
+If we continue developing more feature for the game without it’s going to be incrementally harder and harder to make things work together once we get there.</p>
+
+<p>So the short version is :</p>
 <ul>
-  <li>We have a friend of mine that agreed to spend a bit of his free time to make use some rendering &amp; 3D visuals to help us. ( it’s going to take time but it’s better than nothing &amp; the result are promising )</li>
-  <li>Inno Has a good grasp of what’s happening with ECS and get more efficient &amp; he is taking care of stuff without too much troubles now :D</li>
-  <li>We are still looking for a 3D artist to help us. If you know someone serious lemme know on Discord :)</li>
+  <li>Studied how things are done in Netcode for entities.</li>
+  <li>Experimenting to replicate what we need without polluting the solution with other useless features we don’t need.</li>
+  <li>Coding , Doing &amp; redoing network stuff.</li>
 </ul>
 
-<p>Hopefully we will have more to show pretty soon. In the meantime don’t forget to join <a href="https://discord.gg/sXrYTmXekC">Our Brand new Discord</a> to learn more about the project , share your comment in the forum space there &amp; spaghetti  !</p>
+<p>Hopefully it is going to continue in the right direction.</p>
 
 <p>Take care everyone and see you next week !</p>
 
@@ -363,7 +360,7 @@ It’s not show-able because it’s ugly as fuck for now but improvement are bei
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-03-04T13:00:00-05:00">March 4, 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-03-18T14:00:00-04:00">March 18, 2024</time></p>
 
 
       </footer>
@@ -373,11 +370,11 @@ It’s not show-able because it’s ugly as fuck for now but improvement are bei
       
   <nav class="pagination">
     
-      <a href="/random/2024/02/26/The-Playtypus-Experiment-3.html" class="pagination--pager" title="The Playtypus Experiment #3
+      <a href="/random/2024/03/04/The-Playtypus-Experiment-4.html" class="pagination--pager" title="The Playtypus Experiment #4
 ">Previous</a>
     
     
-      <a href="/networking/2024/03/18/The-Playtypus-Experiment-5.html" class="pagination--pager" title="The Playtypus Experiment #5
+      <a href="/networking/2024/03/27/The-Playtypus-Experiment-6.html" class="pagination--pager" title="The Playtypus Experiment #6
 ">Next</a>
     
   </nav>
