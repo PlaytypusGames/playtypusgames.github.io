@@ -1,4 +1,144 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.4">Jekyll</generator><link href="playtypusgames.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="playtypusgames.github.io/" rel="alternate" type="text/html" /><updated>2024-03-27T10:23:28-04:00</updated><id>playtypusgames.github.io/feed.xml</id><title type="html">PlaytypusGames</title><subtitle>We are here to make good Games</subtitle><entry><title type="html">The Playtypus Experiment #6</title><link href="playtypusgames.github.io/networking/2024/03/27/The-Playtypus-Experiment-6.html" rel="alternate" type="text/html" title="The Playtypus Experiment #6" /><published>2024-03-27T10:00:00-04:00</published><updated>2024-03-27T10:00:00-04:00</updated><id>playtypusgames.github.io/networking/2024/03/27/The-Playtypus-Experiment-6</id><content type="html" xml:base="playtypusgames.github.io/networking/2024/03/27/The-Playtypus-Experiment-6.html"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.4">Jekyll</generator><link href="playtypusgames.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="playtypusgames.github.io/" rel="alternate" type="text/html" /><updated>2024-04-13T12:46:46-04:00</updated><id>playtypusgames.github.io/feed.xml</id><title type="html">PlaytypusGames</title><subtitle>We are here to make good Games</subtitle><entry><title type="html">The Playtypus Experiment #7</title><link href="playtypusgames.github.io/networking/2024/04/13/The-Playtypus-Experiment-7.html" rel="alternate" type="text/html" title="The Playtypus Experiment #7" /><published>2024-04-13T10:00:00-04:00</published><updated>2024-04-13T10:00:00-04:00</updated><id>playtypusgames.github.io/networking/2024/04/13/The-Playtypus-Experiment-7</id><content type="html" xml:base="playtypusgames.github.io/networking/2024/04/13/The-Playtypus-Experiment-7.html"><![CDATA[<h2 id="why-the-slow-communication-">Why the slow communication ?</h2>
+
+<blockquote>
+  <p>Are you guys alive ? Well ? Are you giving up ?</p>
+</blockquote>
+
+<p>Short answer : Yes , Yes , No</p>
+
+<p>Long answer : No</p>
+
+<p>So … Following the post of Inno i’ll give you a bigger overview of what’s happening behind the scenes :</p>
+
+<p>When I started this game I might have overestimated the tech ready-ness of the networking stack of unity. I’ve been blinded by all the stars of <a href="&quot;https://docs.unity3d.com/Packages/com.unity.netcode@1.2/manual/index.html&quot;">netcode for entities</a>.</p>
+
+<p>At the time I was like :</p>
+
+<blockquote>
+  <p>Yeah, no worries,  it’s gonna be super easy with that, the scale is massive, etc … etc …</p>
+</blockquote>
+
+<p>Oh boy I was wrong … I was so wrong …</p>
+
+<h2 id="the-game-plan">The game plan</h2>
+
+<p>While the first gameplay and tech side has been mostly done at first by me, now we are two on the same boat …</p>
+
+<p>And we are both crazy … So instead of giving up . We started experimenting.</p>
+
+<p>The issue with netcode was : don’t laught , the scale. It’s simply not gonna work as explained previously in <a href="&quot;https://playtypusgames.github.io/networking/2024/03/18/The-Playtypus-Experiment-5.html&quot;">TPE#5</a> &amp; <a href="&quot;https://playtypusgames.github.io/networking/2024/03/27/The-Playtypus-Experiment-6.html&quot;">TPE#6</a>.</p>
+
+<p>So as Inno explained we are doing our own multiplayer stack for the Proof Of Concept of the game.</p>
+
+<p>We ( Me trying to keep everything on a healthy track &amp; Inno being Inno  ) went on a journey to develop that in multiple layers, each layer being built on top of each other that roughly look like this :</p>
+
+<p><img src="https://playtypusgames.github.io/assets/Images/PlaytypusExperiment/TPE7/LayerGraph.png" alt="img.png" /></p>
+
+<p>So Basically we are having our “Netcode” Layer that take care of connecting the clients , creating the server etc … Setup the Entities Worlds etc … That’s the easy thing, It’s green cause , well that part is done and we barely touch it anymore.</p>
+
+<p>Next, PlaytypusNotwerk is the core of our tech.</p>
+
+<p>It’s doing a lot ( maybe too much ) of stuff and currently is 2 layers of features :</p>
+<ul>
+  <li>NotwerkTransport -&gt; Welp transporting bits , CF : <a href="&quot;https://playtypusgames.github.io/networking/2024/03/27/The-Playtypus-Experiment-6.html&quot;">TPE#6</a>
+    <ul>
+      <li>Ensure the reception of the data packages</li>
+      <li>Optimise the data to be as efficient as possible</li>
+    </ul>
+  </li>
+  <li>NotwerkCommands -&gt; Our implementation of RPC commands ( messaging system between games over the network ) , it’s using the features from NotwerkTransport to do stuff
+    <ul>
+      <li>Support for sending a TON of commands at once</li>
+      <li>Better support of Entities IComponentData over the network</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Transport , well … transport
+Commands are way more usefull in our implementation than they are in netcode for entities.</p>
+
+<p>We do have some RoslynCode generator on the side to help with the boilerplate code needed to keep it easy to work with.</p>
+
+<p>So PlaytypusNotwerk is in yellow in the graph, meaning that it’s working as intended, we are confident that it’s working with the features we want and we can actually build on top of it. 
+Now we ensure that the API is staying relatively stable while refactoring the code in the background.</p>
+
+<p>Inno is polishing that bad boy.</p>
+
+<blockquote>
+  <p>What about you Touhma ?</p>
+</blockquote>
+
+<p>I’m glad you asked !</p>
+
+<p>I’m working currently on the PlaytypusLockstep layer , it’s in red cause is very much ongoing work and we are still figuring out how to build it. 
+How it should work ? Stuff like that.</p>
+
+<p>The main Idea here is that it’s built on top of PlaytypusNotwerk ,that’s the third layer.</p>
+
+<p>Now that PlaytypusNotwerk is functionnal I can act as a “client” for Inno and we figure out the quirk on the way.</p>
+
+<p>PlaytypusLockstep is going to be ( for now ) for a few layers working independently of each others :</p>
+
+<ul>
+  <li>A clock system ( Tick , Tack , Tick ) -&gt; In other word a Tick system over the network.
+    <blockquote>
+      <p>You Know what a tick is The idea is to execute actions in the game at a stable pacing to ease the issues of synchronisations</p>
+    </blockquote>
+  </li>
+  <li>A Verification Layer -&gt; Framework for the gameplay to be able for the gameplay to verify if an action is possible or not.
+    <blockquote>
+      <p>Roughly : Can you build something here ?</p>
+    </blockquote>
+  </li>
+  <li>A Planification Layer -&gt; Planning depending on the state of the network when commands need to be executed.
+    <blockquote>
+      <p>The build has been validated by the server, now when Am I going to see the action executed on my side ?</p>
+    </blockquote>
+  </li>
+  <li>An Execution Layer -&gt; Framework for the gameplay to be able to specify gamecode to execute on both side
+    <blockquote>
+      <p>What to do in the game code for the building to be functioning ? Components, Colliders, Animations, etc …</p>
+    </blockquote>
+  </li>
+  <li>A cleaning Layer -&gt; Cleaning of the data now useless
+    <blockquote>
+      <p>Once a command is consumed be sure that it can’t be executed a second time to avoid issues</p>
+    </blockquote>
+  </li>
+  <li>A Synchronisation Layer -&gt; checking that everyone is in sync
+    <blockquote>
+      <p>Ensuring everyone have the same results with the same orders of actions , if not , Kick the player and notify the players</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p>The main Idea behind the Lockstep package is that we want to ensure actions are sync on the network and the gameplay is made so we are always in the same state than our friends while playing :)</p>
+
+<p>Currently, it’s still in a rough state but we are prototyping that. 
+Adding features when needed to PlaytypusNotwerk
+Clarifying the dependencies on the System Execution orders etc …</p>
+
+<p>So pretty much not ready yet.</p>
+
+<p>Next time you see a game with network that don’t work as intended right away. Welp , please be patient with the devs, it’s hard as hell.</p>
+
+<p>Don’t yell at the devs, yell at the management that don’t give dev enough time &amp; resources to figure it out in a good way.</p>
+
+<h2 id="what-now-">What now ?</h2>
+
+<p>Still pretty much work is ongoing.</p>
+
+<p>Once the Lockstep layer is done, we should be able to get back to the gameplay and test it in real condition with our Factory Framework to network it.</p>
+
+<p>Until that please share this blog &amp; the discord it would help us a LOT in the future when we start the real production work of the game.</p>
+
+<p>If you have any question feel free to send it our way ! :D</p>
+
+<p>Until then, you can join <a href="https://discord.gg/sXrYTmXekC">Our Brand new Discord</a> to learn more about the project, chat, share ideas &amp; meet the dev team !</p>
+
+<p>Take Care everyone !</p>
+
+<p>Touhma</p>]]></content><author><name>Touhma</name></author><category term="Networking" /><summary type="html"><![CDATA[Why the slow communication ?]]></summary></entry><entry><title type="html">The Playtypus Experiment #6</title><link href="playtypusgames.github.io/networking/2024/03/27/The-Playtypus-Experiment-6.html" rel="alternate" type="text/html" title="The Playtypus Experiment #6" /><published>2024-03-27T10:00:00-04:00</published><updated>2024-03-27T10:00:00-04:00</updated><id>playtypusgames.github.io/networking/2024/03/27/The-Playtypus-Experiment-6</id><content type="html" xml:base="playtypusgames.github.io/networking/2024/03/27/The-Playtypus-Experiment-6.html"><![CDATA[<blockquote>
   <p>Touhma : First Post from Inno It’s his first time , don’t be gentle !</p>
 </blockquote>
 

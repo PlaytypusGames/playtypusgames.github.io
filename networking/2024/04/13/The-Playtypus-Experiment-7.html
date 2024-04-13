@@ -1,0 +1,503 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>The Playtypus Experiment #7 - PlaytypusGames</title>
+<meta name="description" content="Why the slow communication ?">
+
+
+  <meta name="author" content="Touhma">
+  
+  <meta property="article:author" content="Touhma">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="PlaytypusGames">
+<meta property="og:title" content="The Playtypus Experiment #7">
+<meta property="og:url" content="playtypusgames.github.io/networking/2024/04/13/The-Playtypus-Experiment-7.html">
+
+
+  <meta property="og:description" content="Why the slow communication ?">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2024-04-13T10:00:00-04:00">
+
+
+
+
+
+
+<link rel="canonical" href="playtypusgames.github.io/networking/2024/04/13/The-Playtypus-Experiment-7.html">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "playtypusgames.github.io/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="PlaytypusGames Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="https://playtypusgames.github.io/assets/Images/Playtypus-Temporary-Transparency.png" alt="PlaytypusGames"></a>
+        
+        <a class="site-title" href="/">
+          PlaytypusGames
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="https://avatars.githubusercontent.com/u/8696405?v=4" alt="Touhma" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Touhma</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Unity Developer - Playtypus Games</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Montreal, QC, Canada</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/Touhma" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="The Playtypus Experiment #7">
+    <meta itemprop="description" content="Why the slow communication ?">
+    <meta itemprop="datePublished" content="2024-04-13T10:00:00-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">The Playtypus Experiment #7
+</h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h2 id="why-the-slow-communication-">Why the slow communication ?</h2>
+
+<blockquote>
+  <p>Are you guys alive ? Well ? Are you giving up ?</p>
+</blockquote>
+
+<p>Short answer : Yes , Yes , No</p>
+
+<p>Long answer : No</p>
+
+<p>So … Following the post of Inno i’ll give you a bigger overview of what’s happening behind the scenes :</p>
+
+<p>When I started this game I might have overestimated the tech ready-ness of the networking stack of unity. I’ve been blinded by all the stars of <a href="&quot;https://docs.unity3d.com/Packages/com.unity.netcode@1.2/manual/index.html&quot;">netcode for entities</a>.</p>
+
+<p>At the time I was like :</p>
+
+<blockquote>
+  <p>Yeah, no worries,  it’s gonna be super easy with that, the scale is massive, etc … etc …</p>
+</blockquote>
+
+<p>Oh boy I was wrong … I was so wrong …</p>
+
+<h2 id="the-game-plan">The game plan</h2>
+
+<p>While the first gameplay and tech side has been mostly done at first by me, now we are two on the same boat …</p>
+
+<p>And we are both crazy … So instead of giving up . We started experimenting.</p>
+
+<p>The issue with netcode was : don’t laught , the scale. It’s simply not gonna work as explained previously in <a href="&quot;https://playtypusgames.github.io/networking/2024/03/18/The-Playtypus-Experiment-5.html&quot;">TPE#5</a> &amp; <a href="&quot;https://playtypusgames.github.io/networking/2024/03/27/The-Playtypus-Experiment-6.html&quot;">TPE#6</a>.</p>
+
+<p>So as Inno explained we are doing our own multiplayer stack for the Proof Of Concept of the game.</p>
+
+<p>We ( Me trying to keep everything on a healthy track &amp; Inno being Inno  ) went on a journey to develop that in multiple layers, each layer being built on top of each other that roughly look like this :</p>
+
+<p><img src="https://playtypusgames.github.io/assets/Images/PlaytypusExperiment/TPE7/LayerGraph.png" alt="img.png" /></p>
+
+<p>So Basically we are having our “Netcode” Layer that take care of connecting the clients , creating the server etc … Setup the Entities Worlds etc … That’s the easy thing, It’s green cause , well that part is done and we barely touch it anymore.</p>
+
+<p>Next, PlaytypusNotwerk is the core of our tech.</p>
+
+<p>It’s doing a lot ( maybe too much ) of stuff and currently is 2 layers of features :</p>
+<ul>
+  <li>NotwerkTransport -&gt; Welp transporting bits , CF : <a href="&quot;https://playtypusgames.github.io/networking/2024/03/27/The-Playtypus-Experiment-6.html&quot;">TPE#6</a>
+    <ul>
+      <li>Ensure the reception of the data packages</li>
+      <li>Optimise the data to be as efficient as possible</li>
+    </ul>
+  </li>
+  <li>NotwerkCommands -&gt; Our implementation of RPC commands ( messaging system between games over the network ) , it’s using the features from NotwerkTransport to do stuff
+    <ul>
+      <li>Support for sending a TON of commands at once</li>
+      <li>Better support of Entities IComponentData over the network</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Transport , well … transport
+Commands are way more usefull in our implementation than they are in netcode for entities.</p>
+
+<p>We do have some RoslynCode generator on the side to help with the boilerplate code needed to keep it easy to work with.</p>
+
+<p>So PlaytypusNotwerk is in yellow in the graph, meaning that it’s working as intended, we are confident that it’s working with the features we want and we can actually build on top of it. 
+Now we ensure that the API is staying relatively stable while refactoring the code in the background.</p>
+
+<p>Inno is polishing that bad boy.</p>
+
+<blockquote>
+  <p>What about you Touhma ?</p>
+</blockquote>
+
+<p>I’m glad you asked !</p>
+
+<p>I’m working currently on the PlaytypusLockstep layer , it’s in red cause is very much ongoing work and we are still figuring out how to build it. 
+How it should work ? Stuff like that.</p>
+
+<p>The main Idea here is that it’s built on top of PlaytypusNotwerk ,that’s the third layer.</p>
+
+<p>Now that PlaytypusNotwerk is functionnal I can act as a “client” for Inno and we figure out the quirk on the way.</p>
+
+<p>PlaytypusLockstep is going to be ( for now ) for a few layers working independently of each others :</p>
+
+<ul>
+  <li>A clock system ( Tick , Tack , Tick ) -&gt; In other word a Tick system over the network.
+    <blockquote>
+      <p>You Know what a tick is The idea is to execute actions in the game at a stable pacing to ease the issues of synchronisations</p>
+    </blockquote>
+  </li>
+  <li>A Verification Layer -&gt; Framework for the gameplay to be able for the gameplay to verify if an action is possible or not.
+    <blockquote>
+      <p>Roughly : Can you build something here ?</p>
+    </blockquote>
+  </li>
+  <li>A Planification Layer -&gt; Planning depending on the state of the network when commands need to be executed.
+    <blockquote>
+      <p>The build has been validated by the server, now when Am I going to see the action executed on my side ?</p>
+    </blockquote>
+  </li>
+  <li>An Execution Layer -&gt; Framework for the gameplay to be able to specify gamecode to execute on both side
+    <blockquote>
+      <p>What to do in the game code for the building to be functioning ? Components, Colliders, Animations, etc …</p>
+    </blockquote>
+  </li>
+  <li>A cleaning Layer -&gt; Cleaning of the data now useless
+    <blockquote>
+      <p>Once a command is consumed be sure that it can’t be executed a second time to avoid issues</p>
+    </blockquote>
+  </li>
+  <li>A Synchronisation Layer -&gt; checking that everyone is in sync
+    <blockquote>
+      <p>Ensuring everyone have the same results with the same orders of actions , if not , Kick the player and notify the players</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p>The main Idea behind the Lockstep package is that we want to ensure actions are sync on the network and the gameplay is made so we are always in the same state than our friends while playing :)</p>
+
+<p>Currently, it’s still in a rough state but we are prototyping that. 
+Adding features when needed to PlaytypusNotwerk
+Clarifying the dependencies on the System Execution orders etc …</p>
+
+<p>So pretty much not ready yet.</p>
+
+<p>Next time you see a game with network that don’t work as intended right away. Welp , please be patient with the devs, it’s hard as hell.</p>
+
+<p>Don’t yell at the devs, yell at the management that don’t give dev enough time &amp; resources to figure it out in a good way.</p>
+
+<h2 id="what-now-">What now ?</h2>
+
+<p>Still pretty much work is ongoing.</p>
+
+<p>Once the Lockstep layer is done, we should be able to get back to the gameplay and test it in real condition with our Factory Framework to network it.</p>
+
+<p>Until that please share this blog &amp; the discord it would help us a LOT in the future when we start the real production work of the game.</p>
+
+<p>If you have any question feel free to send it our way ! :D</p>
+
+<p>Until then, you can join <a href="https://discord.gg/sXrYTmXekC">Our Brand new Discord</a> to learn more about the project, chat, share ideas &amp; meet the dev team !</p>
+
+<p>Take Care everyone !</p>
+
+<p>Touhma</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2024-04-13T10:00:00-04:00">April 13, 2024</time></p>
+
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/networking/2024/03/27/The-Playtypus-Experiment-6.html" class="pagination--pager" title="The Playtypus Experiment #6
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 PlaytypusGames. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
